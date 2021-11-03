@@ -15,8 +15,7 @@ BASECONFIG=/etc/mrtgLikeRRD/base.config
 
 if [ $# -ne 1 ]; then
 	echo ""
-	echo "Error: Please provide target config as parameter "
-	echo "       second parameter and display graphs (I/O/B) as third."
+	echo "Error: Please provide target config as parameter"
 	echo ""
 	exit
 fi
@@ -37,7 +36,7 @@ fi
 . ${CONFIG}
 
 if [ "x${DATASOURCE}" != "xGAUGE" -a "x${DATASOURCE}" != "xCOUNTER" ]; then
-	errorExit "unknown datasource (${DATASOURCE}) provided"
+	errorExit "unknown datasource (${DATASOURCE}) provided in config file"
 fi
 
 # Infos about used variables in RRD-files:
